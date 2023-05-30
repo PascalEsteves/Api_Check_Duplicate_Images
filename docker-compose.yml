@@ -1,0 +1,10 @@
+version: "3"
+services:
+  unimrcp:
+    hostname: duplicate_image
+    container_name: duplicate_image
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "5055:5055/tcp"
+    command: uvicorn api:app --host 0.0.0.0 --port 5055
